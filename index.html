@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <title>Biogas Extraction POC Documentation</title>
+    <meta name="description" content="Professional documentation site for Biogas Extraction POC with clear explanations and elegant animations." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script>
+      window.tailwindcss = { theme: {} };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- Top scroll progress bar -->
+    <div id="scroll-progress" class="fixed left-0 top-0 h-1 bg-cyan-400 z-50 w-0"></div>
+
+    <!-- Decorative gradient background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden -z-10">
+      <div class="absolute -top-40 -left-40 h-[32rem] w-[32rem] animate-slow-spin rounded-full bg-cyan-600/20 blur-3xl"></div>
+      <div class="absolute top-1/3 -right-40 h-[28rem] w-[28rem] animate-slow-pulse rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-emerald-600/10 blur-3xl"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 border-b border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-3 font-semibold">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-400 to-fuchsia-500 text-slate-900 font-bold">B</span>
+            <span class="text-slate-100">Biogas Extraction POC</span>
+          </a>
+
+          <div class="flex items-center gap-3">
+            <div class="relative hidden md:block">
+              <input id="search-input" type="search" placeholder="Search docs..." class="w-72 rounded-md bg-slate-800/70 pl-9 pr-4 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/60" />
+              <svg class="pointer-events-none absolute left-2 top-2.5 h-4 w-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l3.387 3.387a1 1 0 01-1.414 1.414l-3.387-3.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <button id="dark-toggle" class="rounded-md p-2 hover:bg-white/5" aria-label="Toggle theme">
+              <svg id="icon-sun" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 100-12 6 6 0 000 12z"/><path fill-rule="evenodd" d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 16a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zM4.929 4.929a1 1 0 011.414 0L7.757 6.343a1 1 0 11-1.414 1.414L4.93 6.343a1 1 0 010-1.414zm10.607 10.607a1 1 0 011.414 0l1.414 1.414a1 1 0 11-1.414 1.414L15.536 16.95a1 1 0 010-1.414zM2 13a1 1 0 110-2h2a1 1 0 110 2H2zm16 0a1 1 0 110-2h2a1 1 0 110 2h-2zM4.929 19.071a1 1 0 010-1.414L6.343 16.243a1 1 0 111.414 1.414L6.343 19.07a1 1 0 01-1.414 0zM16.95 7.757a1 1 0 010-1.414l1.414-1.414a1 1 0 111.414 1.414L18.364 7.757A1 1 0 0116.95 7.757z" clip-rule="evenodd"/></svg>
+            </button>
+            <a id="toc-toggle" href="#" class="md:hidden rounded-md p-2 hover:bg-white/5" aria-label="Open menu">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8 lg:pt-20">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div data-aos="fade-right">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              Biogas Extraction POC
+              <span class="block bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent">Documentation</span>
+            </h1>
+            <p class="mt-4 text-slate-300 text-lg">Crystal-clear explanations, structured insights, and a modern reading experience enhanced with thoughtful, unobtrusive animations.</p>
+            <div class="mt-6 flex items-center gap-3">
+              <a href="#docs" class="inline-flex items-center rounded-md bg-cyan-500/90 px-4 py-2 font-medium text-slate-900 hover:bg-cyan-400">Read the Docs</a>
+              <a href="#highlights" class="inline-flex items-center rounded-md border border-white/10 px-4 py-2 font-medium hover:bg-white/5">Highlights</a>
+            </div>
+          </div>
+          <div class="relative" data-aos="fade-left">
+            <div class="relative mx-auto h-64 w-full max-w-md rounded-xl bg-gradient-to-tr from-cyan-500/10 to-fuchsia-500/10 p-[1px]">
+              <div class="h-full w-full rounded-xl bg-slate-900/60 backdrop-blur">
+                <div class="absolute inset-0 animate-grid-mask opacity-40"></div>
+                <div class="absolute inset-6 grid grid-cols-3 gap-3 p-2">
+                  <div class="animate-float-slow rounded-lg bg-cyan-400/20"></div>
+                  <div class="animate-float rounded-lg bg-fuchsia-400/20"></div>
+                  <div class="animate-float-slow rounded-lg bg-emerald-400/20"></div>
+                  <div class="animate-float rounded-lg bg-cyan-400/20"></div>
+                  <div class="animate-float-slow rounded-lg bg-fuchsia-400/20"></div>
+                  <div class="animate-float rounded-lg bg-emerald-400/20"></div>
+                  <div class="animate-float rounded-lg bg-cyan-400/20"></div>
+                  <div class="animate-float-slow rounded-lg bg-fuchsia-400/20"></div>
+                  <div class="animate-float rounded-lg bg-emerald-400/20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="0">
+          <h3 class="feature-title">Clear Explanations</h3>
+          <p class="feature-desc">Readable typography and structured sections make complex content easy to absorb.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="feature-title">Elegant Animations</h3>
+          <p class="feature-desc">Subtle motion guides attention without distracting from the substance.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="feature-title">Fast & Portable</h3>
+          <p class="feature-desc">Static, secure, and deployable to GitHub Pages with zero build step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Docs Layout -->
+    <main id="docs" class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[280px_1fr]">
+        <aside id="toc" class="lg:sticky lg:top-20 lg:h-[80vh] lg:overflow-y-auto hidden lg:block" aria-label="Table of contents">
+          <div class="rounded-xl border border-white/10 bg-slate-900/50 p-4">
+            <h2 class="mb-2 text-sm font-semibold text-slate-300">On this page</h2>
+            <nav id="toc-content" class="toc"></nav>
+          </div>
+        </aside>
+
+        <article class="min-w-0">
+          <div id="doc-container" class="prose prose-invert max-w-none">
+            <div class="rounded-xl border border-white/10 bg-slate-900/50 p-6" data-aos="fade-up">
+              <div class="mb-4 flex items-center gap-2 text-sm text-slate-400">
+                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span>Loaded from docs/Biogas_Extraction_POC_Document.md</span>
+              </div>
+              <div id="doc-content"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Search results dropdown -->
+    <div id="search-results" class="hidden absolute right-8 top-16 z-40 w-[28rem] max-w-[90vw] rounded-xl border border-white/10 bg-slate-900/95 p-2 shadow-2xl backdrop-blur"></div>
+
+    <footer class="mx-auto mt-20 max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between border-t border-white/5 pt-6 text-sm text-slate-400">
+        <p>© <span id="year"></span> Biogas Extraction POC</p>
+        <a class="hover:text-slate-200" href="#">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
